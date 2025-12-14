@@ -23,6 +23,7 @@ class ColumnSummary:
     std: Optional[float] = None
     n_zeros: Optional[int] = None
 
+
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
 

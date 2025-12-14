@@ -93,6 +93,13 @@ def report(
 
     # 2. Качество в целом
     quality_flags = compute_quality_flags(summary, missing_df)
+    
+
+    summary_df["n_constant_columns"] = len(quality_flags["constant_columns_list"])
+    summary_df["n_high_cardinality"] = len(quality_flags["high_cardinality_names"])
+    summary_df["n_zero_heavy"] = len(quality_flags["zero_heavy_cols_list"])
+
+
 
     # 3. Сохраняем табличные артефакты
     summary_df.to_csv(out_root / "summary.csv", index=False)
