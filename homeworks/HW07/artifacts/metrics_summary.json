@@ -1,0 +1,44 @@
+{
+    "S07-hw-dataset-01.csv": {
+        "KMeans": {
+            "silhouette": 0.5216395622404242,
+            "davies_bouldin": 0.6853295219054459,
+            "calinski_harabasz": 11786.95462267153,
+            "noise_pct": 0.0
+        },
+        "DBSCAN": {
+            "silhouette": 0.28312477366901373,
+            "davies_bouldin": 0.946760657362018,
+            "calinski_harabasz": 4301.220982297523,
+            "noise_pct": 3.3666666666666663
+        }
+    },
+    "S07-hw-dataset-02.csv": {
+        "KMeans": {
+            "silhouette": 0.3068610017701601,
+            "davies_bouldin": 1.3234721699867644,
+            "calinski_harabasz": 3573.3933329348392,
+            "noise_pct": 0.0
+        },
+        "DBSCAN": {
+            "silhouette": 0.08522505460147263,
+            "davies_bouldin": 0.5896990784253007,
+            "calinski_harabasz": 21.95165666653018,
+            "noise_pct": 7.2375
+        }
+    },
+    "S07-hw-dataset-03.csv": {
+        "KMeans": {
+            "silhouette": 0.31554470037825183,
+            "davies_bouldin": 1.1577256320598661,
+            "calinski_harabasz": 6957.162639510166,
+            "noise_pct": 0.0
+        },
+        "DBSCAN": {
+            "silhouette": -0.23607621117106722,
+            "davies_bouldin": 0.9304360273636127,
+            "calinski_harabasz": 323.43126955303904,
+            "noise_pct": 12.533333333333333
+        }
+    }
+}

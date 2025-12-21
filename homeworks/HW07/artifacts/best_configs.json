@@ -1,0 +1,23 @@
+{
+    "S07-hw-dataset-01.csv": {
+        "best_model": "KMeans",
+        "params": {
+            "n_clusters": 2
+        },
+        "criterion": "Highest Silhouette Score on non-noise points"
+    },
+    "S07-hw-dataset-02.csv": {
+        "best_model": "KMeans",
+        "params": {
+            "n_clusters": 2
+        },
+        "criterion": "Highest Silhouette Score on non-noise points"
+    },
+    "S07-hw-dataset-03.csv": {
+        "best_model": "KMeans",
+        "params": {
+            "n_clusters": 3
+        },
+        "criterion": "Highest Silhouette Score on non-noise points"
+    }
+}
