@@ -1,0 +1,22 @@
+{
+  "DecisionTree": {
+    "accuracy": 0.8612,
+    "f1_score": 0.765,
+    "roc_auc": 0.8973
+  },
+  "RandomForest": {
+    "accuracy": 0.9225,
+    "f1_score": 0.8726,
+    "roc_auc": 0.9648
+  },
+  "AdaBoost": {
+    "accuracy": 0.8363,
+    "f1_score": 0.7234,
+    "roc_auc": 0.8994
+  },
+  "Stacking": {
+    "accuracy": 0.9296,
+    "f1_score": 0.8882,
+    "roc_auc": 0.9668
+  }
+}

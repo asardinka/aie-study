@@ -1,0 +1,23 @@
+{
+  "DecisionTree": {
+    "best_params": {
+      "max_depth": 7,
+      "min_samples_leaf": 10
+    },
+    "cv_score": 0.8437
+  },
+  "RandomForest": {
+    "best_params": {
+      "max_features": "sqrt",
+      "min_samples_leaf": 5
+    },
+    "cv_score": 0.9053
+  },
+  "AdaBoost": {
+    "best_params": {
+      "learning_rate": 1.0,
+      "n_estimators": 100
+    },
+    "cv_score": 0.8132
+  }
+}
