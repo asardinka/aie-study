@@ -1,0 +1,17 @@
+{
+    "dataset": "EMNIST-balanced",
+    "seed": 42,
+    "hidden_sizes": [
+        1024,
+        512,
+        256
+    ],
+    "dropout": 0.3,
+    "batchnorm": false,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "epochs_trained": 48,
+    "best_val_accuracy": 0.8695478723404255
+}
