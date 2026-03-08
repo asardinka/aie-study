@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,SimpleCNN,Adam,0.001,20,0.655,,,,,Базовая CNN без аугментаций
+C2,classification,STL10,42,SimpleCNN,Adam,0.001,20,0.576,,,,,"SimpleCNN с аугментациями, нужно больше эпох"
+C3,classification,STL10,42,ResNet18 head-only,Adam,0.001,20,0.898,,,,,"Pretrained ResNet18, заморожен backbone, 5K обучаемых параметров"
+C4,classification,STL10,42,ResNet18 finetune (layer4+fc),Adam,0.001,20,0.919,0.9064,,,,"Лучшая модель. Fine-tune layer4+fc, сильный overfitting на train"
+V1,detection,Pascal VOC 2012,42,FasterRCNN_ResNet50_FPN (pretrained COCO),,,0,,,0.3763,0.9038,0.8253,"score_thr=0.3, iou_thr=0.5, n_samples=100. Высокий recall, много FP"
+V2,detection,Pascal VOC 2012,42,FasterRCNN_ResNet50_FPN (pretrained COCO),,,0,,,0.6809,0.8033,0.8402,"score_thr=0.7, iou_thr=0.5, n_samples=100. Высокий precision, меньше FP"

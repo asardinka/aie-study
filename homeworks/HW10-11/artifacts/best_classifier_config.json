@@ -1,0 +1,16 @@
+{
+  "experiment_id": "C4",
+  "dataset": "STL10",
+  "model": "ResNet18-finetune (layer4+fc)",
+  "image_size": 128,
+  "num_classes": 10,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "batch_size": 128,
+  "epochs": 20,
+  "seed": 42,
+  "val_fraction": 0.2,
+  "best_val_acc": 0.919,
+  "test_acc": 0.906375,
+  "transform": "Resize(128), RandomHorizontalFlip, Normalize(ImageNet)"
+}
