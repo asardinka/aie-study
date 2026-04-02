@@ -1,0 +1,11 @@
+query,expected_source,retrieved_sources,hit_at_k,recall_at_k,rank_of_first_relevant,mrr_at_k
+Что означает data drift?,drift_monitoring.md,drift_monitoring.md | latency_sla.md | mlops_overview.md,1,1.0,1,1.0
+Что хранит model registry?,model_registry.md,model_registry.md | mlops_overview.md | governance.md,1,1.0,1,1.0
+Зачем нужен feature store?,feature_store.md,feature_store.md | mlops_overview.md | offline_online_metrics.md,1,1.0,1,1.0
+Что такое CI CD для ML?,ci_cd_for_ml.md,ci_cd_for_ml.md | mlops_overview.md | offline_online_metrics.md,1,1.0,1,1.0
+Какие бывают онлайн метрики?,offline_online_metrics.md,offline_online_metrics.md | latency_sla.md | ab_testing.md,1,1.0,1,1.0
+Для чего нужен rollback?,rollback_strategy.md,rollback_strategy.md | latency_sla.md | mlops_overview.md,1,1.0,1,1.0
+Что входит в incident response?,incident_response.md,incident_response.md | ab_testing.md | drift_monitoring.md,1,1.0,1,1.0
+Зачем нужен SLA latency?,latency_sla.md,latency_sla.md | drift_monitoring.md | ab_testing.md,1,1.0,1,1.0
+Что дает data validation?,data_validation.md,data_validation.md | ab_testing.md | ci_cd_for_ml.md,1,1.0,1,1.0
+Что включает AI governance?,governance.md,governance.md | mlops_overview.md | incident_response.md,1,1.0,1,1.0

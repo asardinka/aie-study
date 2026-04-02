@@ -1,0 +1,5 @@
+query,before_retrieved_sources,after_retrieved_sources,changed
+Как уменьшить галлюцинации в RAG?,incident_response.md | feature_store.md | ci_cd_for_ml.md,rag_guardrails.md | incident_response.md | prompt_versioning.md,1
+Как сопровождать векторный индекс?,offline_online_metrics.md | mlops_overview.md | model_registry.md,offline_online_metrics.md | prompt_versioning.md | vector_index_maintenance.md,1
+Зачем версионировать prompt?,incident_response.md | ab_testing.md | latency_sla.md,prompt_versioning.md | rag_guardrails.md | vector_index_maintenance.md,1
+Что такое concept drift?,drift_monitoring.md | ab_testing.md | mlops_overview.md,drift_monitoring.md | ab_testing.md | mlops_overview.md,0

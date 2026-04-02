@@ -1,0 +1,6 @@
+question,answer,retrieved_sources
+Почему важно обновлять векторный индекс?,Индекс эмбеддингов нужно регулярно обновлять при добавлении новых документов.,vector_index_maintenance.md | offline_online_metrics.md | drift_monitoring.md
+Как снизить риск галлюцинаций в RAG?,"Для RAG систем полезно версионировать prompt шаблоны и системные инструкции. Guardrails в RAG ограничивают ответы только найденным контекстом, снижают галлюцинации и требуют явного указания источников.",rag_guardrails.md | incident_response.md | prompt_versioning.md
+Зачем нужен model registry в процессе релиза?,"Model Registry хранит версии моделей, метрики и статус жизненного цикла. Включает версионирование данных и моделей, автоматизацию обучения и развертывания, мониторинг качества после релиза.",model_registry.md | mlops_overview.md | data_validation.md
+Что важно при SLA онлайн инференса?,"Для онлайн инференса важны задержка и доступность. SLA фиксирует целевые пороги, например p95 latency и uptime.",latency_sla.md | mlops_overview.md | governance.md
+Какую роль играет data validation?,Data validation помогает остановить pipeline при некорректных входных данных.,data_validation.md | ab_testing.md | mlops_overview.md
