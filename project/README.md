@@ -4,14 +4,9 @@
 
 ## Что нужно на машине
 
-Только **Python 3.11+** и **git**. Остальное подтянется из `pyproject.toml` командами ниже (отдельно ставить PyTorch, FastAPI и т.д. не нужно).
+**Python 3.11+**. Остальное подтянется из `pyproject.toml` командами ниже (отдельно ставить PyTorch, FastAPI и т.д. не нужно).
 
-Клонирование и переход в корень репозитория (рядом с `pyproject.toml` и папкой `src`):
-
-```bash
-git clone https://github.com/asardinka/Artificial-intelligence-project
-cd Artificial-intelligence-project
-```
+**Рабочий каталог для всех команд** — папка `project/`: в ней лежат `pyproject.toml`, `src/`, `artifacts/` и т.д. Если у вас монорепозиторий или архив курса, сначала перейдите в этот каталог (`cd project` или аналог).
 
 Дальше — один из сценариев.
 
@@ -21,7 +16,7 @@ cd Artificial-intelligence-project
 
 1. При необходимости замените или расширьте архитектуры в `src/models/` и согласуйте вызовы в коде обучения (`src/training/`).
 2. Пути к данным, размеры изображений, эпохи и прочее — в `src/config.py`.
-3. Подготовка данных: `data_load.py` или `data_load.ipynb`.
+3. Подготовка данных: `data_load.py` в корне `project/` или `notebooks/data_load.ipynb`.
 
 Создание окружения и установка зависимостей **с extras для обучения**:
 
@@ -45,7 +40,7 @@ python -m pip install --upgrade pip
 python -m pip install -e ".[train]"
 ```
 
-Запуск обучения (из корня репозитория, с активированным venv):
+Запуск обучения (из корня `project/`, с активированным venv):
 
 ```bash
 python -m src.training.train_models
@@ -59,7 +54,7 @@ python -m src.training.train_models
 
 ## 2. Только запуск сервиса на Linux (сервер)
 
-Нужны готовые веса в `artifacts/` (см. раздел «Веса моделей»). Достаточно базовых зависимостей **без** `[train]`.
+Команды ниже — из корня `project/`. Нужны готовые веса в `artifacts/` (см. раздел «Веса моделей»). Достаточно базовых зависимостей **без** `[train]`.
 
 ```bash
 python3 -m venv .venv
@@ -74,7 +69,7 @@ python -m uvicorn src.tumor_app.api:app --host 0.0.0.0 --port 8000
 
 Другой каталог с чекпоинтами — переменная окружения `ARTIFACTS_DIR` (абсолютный путь).
 
-**Альтернатива без venv:** из корня репозитория `docker compose up --build` (веса монтируются в `./artifacts`, в контейнере задан `ARTIFACTS_DIR=/app/artifacts`).
+**Альтернатива без venv:** из корня `project/` выполните `docker compose up --build` (веса монтируются в `./artifacts`, в контейнере задан `ARTIFACTS_DIR=/app/artifacts`).
 
 На минимальных образах Linux, если при импорте PyTorch ругается на OpenMP, может понадобиться пакет вроде `libgomp1` (как в `Dockerfile`).
 
@@ -82,9 +77,9 @@ python -m uvicorn src.tumor_app.api:app --host 0.0.0.0 --port 8000
 
 ## 3. Локальная проверка на Windows
 
-Сценарий для ручной проверки UI и API на своей машине (отдельного набора автотестов в репозитории нет).
+Сценарий для ручной проверки UI и API на своей машине; автоматическая проверка — см. раздел «Прочее» (`pytest`).
 
-**PowerShell** (из корня репозитория):
+**PowerShell** (из корня `project/`):
 
 ```powershell
 python -m venv .venv
