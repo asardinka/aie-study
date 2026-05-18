@@ -1,14 +1,18 @@
 from __future__ import annotations
 
 import base64
+import logging
+import time
 from pathlib import Path
 from typing import cast
 
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from src.tumor_app.infer import Plane, predict_from_bytes
+
+logger = logging.getLogger("aip_tumor.api")
 
 app = FastAPI(
     title="AIP Tumor inference",
@@ -19,6 +23,15 @@ app = FastAPI(
 )
 
 _STATIC = Path(__file__).resolve().parent / "static" / "index.html"
+
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    t0 = time.perf_counter()
+    response = await call_next(request)
+    elapsed_ms = (time.perf_counter() - t0) * 1000
+    logger.info("%s %s -> %d  %.1f ms", request.method, request.url.path, response.status_code, elapsed_ms)
+    return response
 
 
 @app.get("/", include_in_schema=False)
